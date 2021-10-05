@@ -1,0 +1,35 @@
+body{
+    background-color: aquamarine;
+}
+
+
+.main-list {
+    border: 1px solid black;
+    margin: 1em ;
+    padding: 1em;
+    width: 60%;
+}
+.aside {
+    border: 1px solid black;
+    margin: 1em ;
+    padding: 1em;
+    width: 50%;
+    background-color: oldlace;
+
+
+}
+.single-fish {
+    display: flex;
+    margin: 1em;
+    border: 1px solid black;
+}
+
+img {
+    height: auto;
+    width: 20%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
