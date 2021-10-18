@@ -58,7 +58,7 @@ const fishCollection = [
     {
         name: "Samson",
         food: "Anything it wants ",
-        length: 7,
+        length: 5,
         locationHarvested: "Pacific Ocean",
         typeOfFish: "Tuna"
 
@@ -70,3 +70,49 @@ const fishCollection = [
 export const useFish = () => {
     return fishCollection.slice()
 }
+
+export const mostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish
+    // const holyFish = []
+
+    // for (let singleFishObject of fishCollection) {
+    //     if(singleFishObject.length % 3 === 0){
+    //     holyFish.push(singleFishObject)
+    //     }
+    // }
+
+    const holyFish = fishCollection.filter(singleFishObject => singleFishObject.length % 3 === 0)
+    
+    console.log(holyFish)
+    return holyFish
+}
+
+export const soldierFish = () => {
+    // 5, 10, 15, 20, 25, etc... fish
+
+    const soldiers = []
+    for (let singleFishObject of fishCollection) {
+        if(singleFishObject.length % 5 === 0 && singleFishObject.length % 3 !== 0){
+        soldiers.push(singleFishObject)
+        }
+    }
+    console.log(soldiers)
+    return soldiers
+}
+
+export const nonHolyFish = () => {
+    // Any fish not a multiple of 3 or 5
+
+    const regularFish = []
+
+    for (let singleFishObject of fishCollection) {
+        if(singleFishObject.length % 5 !== 0 && singleFishObject.length % 3 !== 0){
+        regularFish.push(singleFishObject)
+        }
+    }
+    console.log(regularFish)
+    return regularFish
+}
+
+
+
